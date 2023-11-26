@@ -1,0 +1,18 @@
+.gallery-images-wrap{
+    margin: 100px 0;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.gallery-img1{
+    background-image: url("../images/gallery_pics/gallery1.jpg");
+}
+.gallery-img2{
+    background-image: url("../images/gallery_pics/gallery2.jpg");
+}
+.gallery-img3{
+    background-image: url("../images/gallery_pics/gallery3.jpg");
+}
+.gallery-img4{
+    background-image: url("../images/gallery_pics/gallery4.jpg");
+}

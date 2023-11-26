@@ -1,0 +1,51 @@
+@import url("../../styles/style.css");
+@import url("../../styles/reset.css");
+@import url("../../styles/header.css");
+@import url("../../styles/variables.css");
+@import url("../../styles/adaptive.css");
+header{
+    background-color: var(--secondary-color);
+    position: relative;
+}
+
+.blog-title{
+    padding: 0;
+    justify-content: end;
+    padding-bottom: 40px;
+}
+.fb-comments, .fb-comments span{
+    width: 100% !important;
+}
+.blog-post-wrap{
+    margin-top: 0;
+}
+.blog-image-block{
+    background: url("../../images/blog_img.jpg");
+    background-size: cover;
+    background-position: center;
+
+    padding: 0 !important;
+}
+.hero-title{
+    max-width: 100%;
+}
+
+.section-wrap {
+    padding-top: 120px !important;
+}
+.blog-post-wrap{
+    margin-bottom: 20px;
+}
+@media only screen and (min-width: 1120px) {
+    .blog-image-block{
+        margin-bottom: 40px;
+    }
+    .blog-title{
+        padding-top: 40px 0;
+    }
+}
+@media only screen and (max-width: 720px) {
+    .section-wrap{
+        padding-top: 80px !important;
+    }
+}

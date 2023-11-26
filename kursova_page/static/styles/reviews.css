@@ -1,0 +1,39 @@
+.review-block{
+    display: none;
+    padding: 60px 20px 32px 20px;
+    margin: 100px 0;
+    border-radius: 12px;
+    background: #F5F6F7;
+    gap: 20px;
+    position: relative;
+
+}
+.avatar1{
+    background: url("../images/review_avatars/avatar1.png"), lightgray;
+}
+.avatar2{
+    background: url("../images/review_avatars/avatar2.png"), lightgray;
+}
+.avatar3{
+    background: url("../images/review_avatars/avatar3.png"), lightgray;
+}
+.review-avatar{
+    width: 100px;
+    height: 100px;
+    left: 20px;
+    top: -65px;
+    border-radius: 100px;
+}
+
+.review-text{
+    line-height: 23px;
+}
+
+.client-name{
+    font-family: var(--page-font1);
+    font-size: 24px;
+   
+}
+#firstClient{
+    display: flex;
+}

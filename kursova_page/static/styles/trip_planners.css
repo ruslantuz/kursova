@@ -1,0 +1,79 @@
+.planners-view-btn{
+    margin-top: 32px;
+}
+.planner-view-link-wrap{
+    position: relative;
+}
+.planners-view-link{
+    border-radius: 12px;
+    background: var(--main-page-color);
+    text-decoration: none;
+    padding: 20px;
+    position: absolute;
+    left: 15px;
+    top: 10px;
+}
+.rectangle{
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+}
+.rectangle-left{
+    background: #172432;
+}
+.rectangle-right{
+    background:var(--secondary-text-color);
+    position: absolute;
+    left: 170px;
+    top: 40px;
+    z-index: -1;
+}
+.planners-wrap{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.planner-gallery-image{
+    width: 100%;
+    border-radius: 26px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%),  lightgray;    
+    height: 320px;
+    /* background-position: 50%; */
+}
+.planner-img1{
+    background-image: url("../images/planners_pics/planner1.jpg");
+}
+.planner-img2{
+    background-image: url("../images/planners_pics/planner2.jpg");
+}
+.planner-img3{
+    background-image: url("../images/planners_pics/planner3.jpg");
+}
+.planner-img4{
+    background-image: url("../images/planners_pics/planner4.jpg");
+}
+
+.planner-text{
+    display: flex;
+
+    padding: 20px 0px;
+    gap: 12px;
+}
+.price-day{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.planner-price-text{
+    text-transform: uppercase;
+}
+.planner-title{
+    color: #172432;
+    font-family: var(--page-font1);
+    font-size: 28px;
+    font-weight: 600;
+    
+}
