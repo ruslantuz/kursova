@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import *
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', index, name='index'),
@@ -24,4 +26,4 @@ urlpatterns = [
     path('offers/', offers, name='offers'),
     path('blogs/<int:id>/', blog_item, name='blog_item'),
     path('offers/<int:id>', offer_item, name='offer_item'),
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

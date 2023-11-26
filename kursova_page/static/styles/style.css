@@ -183,3 +183,9 @@ input{
 .swiper{
 	z-index: 0 !important;
 }
+.offer-description, .offer-rate , .offer-text-block {
+	flex: 1;
+}
+.offer-text-block{
+	height: max-content;
+}

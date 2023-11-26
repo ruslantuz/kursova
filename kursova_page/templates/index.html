@@ -281,7 +281,7 @@
 				
 				{% for item in data %}
 				<div class = "offer-item">
-					<div class = "offer-image-block offer-img2 bg-options">	
+					<div style="background-image: url(media/{{item.offer_image}});" class = "offer-image-block bg-options">	
 						
 					</div>
 					<div class = "offer-text-block">	
@@ -298,13 +298,15 @@
 
 						</div>
 						<span class = "offer-description d-block">{{ item.description }}</span>
-						<div class="offer-price-details">
-							<div class = "offer-price-wrap">
-								<span class = "title-small grey-text">From</span>	
-								<span class = "offer-price">€{{ item.pricing }}</span>	
-							</div>
-							<div class = "offer-details">
-								<a class="offer-btn" href = "offers/{{item.id}}">Details</a>
+						<div class="www">
+							<div class="offer-price-details">
+								<div class = "offer-price-wrap">
+									<span class = "title-small grey-text">From</span>	
+									<span class = "offer-price">€{{ item.pricing }}</span>	
+								</div>
+								<div class = "offer-details">
+									<a class="offer-btn" href = "offers/{{item.id}}">Details</a>
+								</div>
 							</div>
 						</div>
 						

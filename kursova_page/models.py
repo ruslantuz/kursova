@@ -6,6 +6,7 @@ class Offers(models.Model):
     rating = models.IntegerField()
     description = models.TextField()
     pricing = models.FloatField()
+    offer_image = models.ImageField(null = True, blank=True, upload_to="images/")
 
     def __str__(self):
-        return self.location
+        return "id: " + str(self.id) + " - " + self.location

@@ -186,7 +186,7 @@
     /* .header-menu, .login-wrap{
         display: block;
     } */
-    header .menu, .btn-login-signup, .blog-post-wrap, .planners-wrap, .gallery-images-wrap, .offer-price-details{
+    header .menu, .btn-login-signup, .blog-post-wrap, .planners-wrap, .gallery-images-wrap, .offer-price-details, .offer-wrap{
         flex-direction: row;
     }
 
