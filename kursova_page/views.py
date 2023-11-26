@@ -8,7 +8,6 @@ def index(request):
     return render(request, 'index.html', {'data': data})
 
 def blogs(request):
-
     return render(request, 'blog_page/index.html')
 
 def offers(request):

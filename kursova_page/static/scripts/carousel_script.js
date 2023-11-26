@@ -1,21 +1,22 @@
-var winWidth = $(window).width();
+
 
 function sidebarWidth(){
+  var winWidth = $(window).width();
   if(winWidth > 1120){
-    $('.destinations .swiper').removeClass('mySwiper-mob');
-    $('.destinations .swiper').addClass('mySwiper');
-    $('.special-offers .swiper').removeClass('offerSwiper-mob');
-    $('.special-offers .swiper').addClass('offerSwiper');
+    $('.destinations .swiper').removeClass('mySwiper-mob').addClass('mySwiper');
+    // $('.destinations .swiper').addClass('mySwiper');
+    $('.special-offers .swiper').removeClass('offerSwiper-mob').addClass('offerSwiper');
+    // $('.special-offers .swiper').addClass('offerSwiper');
   } else {
-    $('.destinations .swiper').removeClass('mySwiper');
-    $('.destinations .swiper').addClass('mySwiper-mob');
-    $('.special-offers .swiper').removeClass('offerSwiper');
-    $('.special-offers .swiper').addClass('offerSwiper-mob');
+    $('.destinations .swiper').removeClass('mySwiper').addClass('mySwiper-mob');
+    // $('.destinations .swiper').addClass('mySwiper-mob');
+    $('.special-offers .swiper').removeClass('offerSwiper').addClass('offerSwiper-mob');
+    // $('.special-offers .swiper').addClass('offerSwiper-mob');
   };
 };
 
 sidebarWidth();
-
+window.onresize = sidebarWidth;
 $(document).resize(function(){
   sidebarWidth();
 });
