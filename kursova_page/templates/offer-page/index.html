@@ -51,46 +51,32 @@
                     <div class="offer-head-left">
                         <div class="offer-title black-text">
                             <h1 class = "title-big">
-                                Lisbon, Portugal
+                                {{ data.location }}
                             </h1>
                         </div>
                         <div class = "offer-rate">
-                            <span class = "title-small grey-text">Rating: </span>	
+                            {% for i in '0123456789'|make_list %}
+                            {% if  forloop.counter <= data.rating %}
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2.00006L15.09 8.26006L22 9.27006L17 14.1401L18.18 21.0201L12 17.7701L5.82 21.0201L7 14.1401L2 9.27006L8.91 8.26006L12 2.00006Z" fill="#FFC107"/>
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2.00006L15.09 8.26006L22 9.27006L17 14.1401L18.18 21.0201L12 17.7701L5.82 21.0201L7 14.1401L2 9.27006L8.91 8.26006L12 2.00006Z" fill="#FFC107"/>
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2.00006L15.09 8.26006L22 9.27006L17 14.1401L18.18 21.0201L12 17.7701L5.82 21.0201L7 14.1401L2 9.27006L8.91 8.26006L12 2.00006Z" fill="#FFC107"/>
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2.00006L15.09 8.26006L22 9.27006L17 14.1401L18.18 21.0201L12 17.7701L5.82 21.0201L7 14.1401L2 9.27006L8.91 8.26006L12 2.00006Z" fill="#FFC107"/>
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2.00006L15.09 8.26006L22 9.27006L17 14.1401L18.18 21.0201L12 17.7701L5.82 21.0201L7 14.1401L2 9.27006L8.91 8.26006L12 2.00006Z" fill="#FFC107"/>
-                            </svg>						
+                                <path d="M12 2.00006L15.09 8.26006L22 9.27006L17 14.1401L18.18 21.0201L12 17.7701L5.82 21.0201L7 14.1401L2 9.27006L8.91 8.26006L12 2.00006Z" fill="#FFC107"/>
+                                </svg>
+                            {% endif %}
+                        {% endfor %}					
                         </div>
                     </div>
                     <div class = "offer-price-wrap">
                         <span class = "title-small grey-text">From</span>	
-                        <span class = "offer-price">€500</span>	
+                        <span class = "offer-price">€{{data.pricing}}</span>	
                     </div>
                 </div>
                 <div class="offer-info-content">
                     <!-- <div class = "offer-image-block offer-img1 bg-options">	
 						
 					</div> -->
-                    <img src="{% static '/images/offers_pics/offer1.jpg' %}" alt="offer1" class="offer-image-block">
+                    <img src="../media/{{data.offer_image}}" alt="offer1" class="offer-image-block">
                     <div class="offer-info-content-right">
-                        <span class = "offer-description d-block">5 nights and 4 days in 5 star hotel, breakfast and lunch included. 
-
-                            literature.5 nights and 4 days in 5 star hotel, breakfast and lunch included. 
-                            Very popular during the renaissance. Passage and going through the cites of the world in classical 
-                            Very popular during the renaissance. Passage and going through the cites of the world in classical 
-                            literature.5 nights and 4 days in 5 star hotel, breakfast and lunch included. 
-
+                        <span class = "offer-description d-block">
+                            {{data.description}}
                         </span>
                         
                         <div class="offer-form-wrap">

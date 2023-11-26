@@ -171,6 +171,14 @@
     }
 
 }
+@media only screen and (min-width: 1122px) and (max-width: 1250px){
+    .offer-price-details span{
+        font-size: 26px !important;
+    }
+    .offer-btn{
+        font-size: 16px !important;
+    }
+}
 
 
 @media only screen and (min-width: 1122px){
@@ -243,7 +251,7 @@
         background-size: cover;
     }
 
-    .offer-wrap, .blog-post-wrap,   .planners-wrap, .gallery-images-wrap{
+    .blog-post-wrap,   .planners-wrap, .gallery-images-wrap{
         gap: 32px;
     }
     .offer-item{
@@ -402,11 +410,11 @@
 }
 
 @media only screen and (min-width: 1800px){
-    .section-wrap > *:not(.swiper), .head-wrapper, .hero-title{
+    .section-wrap > *:not(.destinations .swiper), .head-wrapper, .hero-title{
         padding-left: var(--desktop-vertical-padding) !important;
         padding-right: var(--desktop-vertical-padding) !important;
     }
-    .swiper{
+    .destinations .swiper{
         max-width: calc(1920px + var(--desktop-vertical-padding)) !important;
     }
     .section-wrap> *, .head-wrapper, .hero-title{

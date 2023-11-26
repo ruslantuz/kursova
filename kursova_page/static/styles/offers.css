@@ -1,6 +1,6 @@
 .offer-wrap{
     margin: 60px 0;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 
 .offer-item{
@@ -8,6 +8,7 @@
     flex-direction: column;
     border-radius: 0px 0px 26px 26px;
     background: #FFF8F1;
+    height: 100%;
 }
 
 
@@ -68,3 +69,6 @@
     font-size: 20px;
     text-transform: uppercase;
 }
+.special-offers .swiper-slide {
+    height: auto !important;
+  }

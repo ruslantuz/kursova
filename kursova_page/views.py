@@ -19,6 +19,6 @@ def blog_item(request, id):
     return render(request, 'blog_page/index.html', {'data': data})
 
 def offer_item(request, id):
-    data = Offers.objects.all()
+    data = Offers.objects.get(id = id)
     return render(request, 'offer-page/index.html', {'data': data})
 # Note: insert id of item in database inside a item link on main page, then use this method to render page based by id 
