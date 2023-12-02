@@ -136,7 +136,7 @@ input{
 }
 
 
-.hide, .header-menu:not(.hide){
+.hide, .header-menu:not(.hide), .head-wrapper{
 	transition: height 200ms ease-in-out 100ms,
 	all 200ms ease-in-out 0ms;
 }
@@ -144,13 +144,10 @@ input{
 	background-position: 50%;
 }
 
-.menu-space, .menu-space .slider, .hero-wrap:not(.menu-space), .slider:not(.menu-space) {
-	transition: padding 200ms ease-in-out 0ms,
-	top 150ms ease-in-out 0ms;
-}
+
 
 .login-form{
-	padding: 10px !important;
+	padding: 20px ;
 	flex-direction: column;
 }
 .login-form 
@@ -173,7 +170,6 @@ input{
 	position: relative;
 }
 .planner-gallery-image-active, .planner-active, .planner-gallery-image:not(.planner-gallery-image-active), .planner-text:not(.planner-active){
-	/* transform: translateY(0); */
 	transition: visibility ease-in-out 100ms,
 		transform 200ms ease-in-out 0ms;
 }
@@ -190,7 +186,52 @@ input{
 	height: max-content;
 }
 
-.blocker{
-	width: 100vw !important;
-	height: 100vh !important;
+
+.modal-cont {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.47);
+    top: 0;
+    left: 0;
+    overflow: auto;
+	display: none;
+	z-index: 100;
+}
+.modal-box{
+    width: 80%;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: white;
+	border-radius: 15px 0 15px 15px;
+	max-width: 600px;
+}
+
+.close-btn{
+    position: absolute;
+	right: -5px;
+    top: -5px;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+
+.modal-box {
+    animation-name: modal-animation;
+    animation-duration: .3s;
+    animation-timing-function: ease;
+}
+@keyframes modal-animation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.btn-login-signup>*{
+	cursor: pointer;
 }

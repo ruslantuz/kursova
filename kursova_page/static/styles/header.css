@@ -123,12 +123,10 @@
     background: var(--main-page-color);
 }
 
-.scrolled {
+.scrolled, .burger-clicked{
     background:  var(--secondary-color);
     box-shadow: 0 3px 5px 0.3px rgba(0,0,0,0.1);
-
-
-  }
+}
 .scrolled .head-wrapper{
     padding-top: 15px !important;
     padding-bottom: 15px !important;

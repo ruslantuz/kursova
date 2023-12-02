@@ -5,45 +5,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
 	
-		<meta name="description" content="Travel throughout Europe">
+	<meta name="description" content="Travel throughout Europe">
 
-	    <!-- Open Graph Meta Tags (for social media sharing) -->
-		<meta property="og:title" content="Healthy Smoothie Recipes - Nutritious and Delicious">
-		<meta property="og:description" content="Discover delicious and healthy smoothie recipes for a nutritious boost.">
-		<meta property="og:image" content="https://www.yourwebsite.com/images/smoothie-thumbnail.jpg">
-		<meta property="og:url" content="https://www.yourwebsite.com/healthy-smoothie-recipes">
-		<meta property="og:type" content="article">
-	
-		<!-- Twitter Meta Tags (for Twitter Cards) -->
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="Healthy Smoothie Recipes - Nutritious and Delicious">
-		<meta name="twitter:description" content="Discover delicious and healthy smoothie recipes for a nutritious boost.">
-		<meta name="twitter:image" content="https://www.yourwebsite.com/images/smoothie-thumbnail.jpg">
-		<meta name="twitter:url" content="https://www.yourwebsite.com/healthy-smoothie-recipes">
-		<!-- Meta Tags for SEO Keywords -->
-		<meta name="keywords" content="travel, Europe, trip, trip plan">
+	<!-- Open Graph Meta Tags (for social media sharing) -->
+	<meta property="og:title" content="Travellian Travel Agency">
+	<meta property="og:description" content="Travel throughout the Europe!">
+	<meta property="og:image" content="https://www.yourwebsite.com/images/smoothie-thumbnail.jpg">
+	<meta property="og:url" content="https://www.yourwebsite.com/healthy-smoothie-recipes">
+	<meta property="og:type" content="article">
 
-		<!-- Robots Meta Tag -->
-		<meta name="robots" content="index, follow">
-	
-		<!-- Author Meta Tag -->
-		<meta name="author" content="Travellian">
+	<!-- Twitter Meta Tags (for Twitter Cards) -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Travellian Travel Agency">
+	<meta name="twitter:description" content="Travel throughout the Europe!">
+	<meta name="twitter:image" content="https://www.yourwebsite.com/images/smoothie-thumbnail.jpg">
+	<meta name="twitter:url" content="https://www.yourwebsite.com/healthy-smoothie-recipes">
+	<!-- Meta Tags for SEO Keywords -->
+	<meta name="keywords" content="travel, Europe, trip, trip plan">
+
+	<!-- Robots Meta Tag -->
+	<meta name="robots" content="index, follow">
+
+	<!-- Author Meta Tag -->
+	<meta name="author" content="Travellian">
 	
     <title>Travelian</title>
     <link rel="stylesheet" href="{% static 'styles/style.css' %}">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-	<link rel="icon" href="data:,">
+	<link rel="icon" href="data:,">	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-
-	<!-- font awesome v5.5.0 free version -->
-	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet"> -->
 </head>
 <body>
 	<header id="headerId" class = "head">
 		<div class="head-wrapper d-flex">
 			<div class="logo"></div>
-			<div id="iconMenu" class="menu-btn" onclick="menuBtnFunction(this)">
+			<div id="iconMenu" class="menu-btn">
 				<span></span>
 			</div>
 			<nav id="navigation" class="header-menu hide">
@@ -69,32 +66,39 @@
 			</nav>
 			<div class="login-wrap">
 				<div class= "btn-login-signup">
-					<a class="header-emailform-font" href="#" data-modal="#login-modal">Login</a>
-					<a class="signup-btn d-flex header-emailform-font" href="#" data-modal="#register-modal">Sign up</a>
+					<span class="header-emailform-font" id="loginBtn">Login</span>
+					<span class="signup-btn d-flex header-emailform-font" id="signupBtn" >Sign up</span>
 				</div>
 			</div>
 		</div>
 	</header>
 	
 	<!-- login modal -->
-	<div id="login-modal" class="modal">
-		<form class="login-form form-column d-flex">       
-			<h2 class="title-small black-text">Please login</h2>
-			<input type="text" class="" name="username" placeholder="Email Address" required="" autofocus="" />
-			<input type="password" class="" name="password" placeholder="Password" required=""/>      
-			<label class="checkbox">
-				<input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
-			</label>
-			<button class="modal-btn white-text" type="submit">Login</button>   
+	<div class="modal-cont" id="loginModal">
+		<div id="login-modal" class="modal-box">
+			<form class="login-form form-column d-flex">       
+				<h2 class="title-small black-text">Please login</h2>
+				<input type="text" class="" name="username" placeholder="Email Address" required="" autofocus="" />
+				<input type="password" class="" name="password" placeholder="Password" required=""/>      
+				<label class="checkbox">
+					<input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+				</label>
+				<button class="modal-btn white-text" type="submit">Login</button>   
 			</form>
-	</div>	  
-	<div id="register-modal" class="modal">
-		<form class="login-form form-column d-flex">       
-			<h2 class="title-small black-text">Please Sign Up</h2>
-			<input type="text" class="" name="username" placeholder="Email Address" required="" autofocus="" />
-			<input type="password" class="" name="password" placeholder="Password" required=""/>      
-			<button class="modal-btn white-text" type="submit">Sign Up</button>   
+			<i class="fa-solid fa-circle-xmark close-btn"></i>
+		</div>	  
+	</div>
+
+	<div id="registerModal" class="modal-cont">
+		<div class="modal-box">
+			<form class="login-form form-column d-flex">       
+				<h2 class="title-small black-text">Please Sign Up</h2>
+				<input type="text" class="" name="username" placeholder="Email Address" required="" autofocus="" />
+				<input type="password" class="" name="password" placeholder="Password" required=""/>      
+				<button class="modal-btn white-text" type="submit">Sign Up</button>   
 			</form>
+			<i class="fa-solid fa-circle-xmark close-btn"></i>
+		</div>
 	</div>	  
 	<!--modal end -->
 
@@ -763,7 +767,6 @@
 					<div class="footer-logo">
 						<div class="logo"></div>
 						<span class = "copyright normal-text d-block white-text">Copyright © Travellian 2020 All rights reserved</span>
-
 					</div>
 					<div class="footer-menu">
 						<span class = "footer-title title-small d-block white-text">Menu</span>
@@ -862,17 +865,7 @@
 		</footer>
 	</div>
 
-
-
-
-
-
-
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-	<!-- jQuery Modal -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script> -->
-	<script src="{% static 'scripts/jquery_modal_script.js' %}"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>	
 	<script src="{% static 'scripts/underline_script.js' %}"></script>
 	<script src="{% static 'scripts/carousel_script.js' %}"></script>  
