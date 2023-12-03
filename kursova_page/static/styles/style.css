@@ -236,7 +236,10 @@ input{
 	cursor: pointer;
 }
 
-
 summary{
 	cursor: pointer;
+}
+
+.swal2-confirm{
+	background: var(--main-page-color) !important;
 }
