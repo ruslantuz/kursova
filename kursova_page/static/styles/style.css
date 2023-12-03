@@ -235,3 +235,8 @@ input{
 .btn-login-signup>*{
 	cursor: pointer;
 }
+
+
+summary{
+	cursor: pointer;
+}

@@ -5,10 +5,13 @@ var loginModal = document.querySelector('#loginModal'),
     
 function x () {
     this.parentElement.parentElement.style.display = "none";
-    $('body').css('overflow', '');
+    scrollUnlock();
 }
 function scrollLock(){
   $('body').css('overflow', 'hidden');
+}
+function scrollUnlock(){
+  $('body').css('overflow', '');
 }
 
 loginBtn.onclick = function () {
@@ -28,11 +31,12 @@ signupBtn.onclick = function () {
 window.onclick = function (e) {
     if (e.target.className === 'modal-cont'){
         e.target.style.display = 'none';
+        scrollUnlock();
     }
 }
 window.onkeydown = function (e) {
   if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27){
     $('.modal-cont').css('display','none');
-    $('body').css('overflow', '');
+    scrollUnlock();
   }
 }

@@ -1,6 +1,7 @@
 from django.shortcuts import render
-
 from kursova_page.models import Offers
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 def index(request):

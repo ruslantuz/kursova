@@ -156,10 +156,7 @@
     .login-form{
         padding: 40px !important;
     }
-    .close-btn{
-        /* top: 35px !important;
-        right: 35px !important; */
-    }
+
 }
 
 @media only screen and (min-width: 720px) and (max-width: 1100px){
@@ -445,12 +442,6 @@
 
     .hero-form{
         max-width: 1800px;
-    }
-
-}
-@media only screen and (min-width: 2950px){
-    .form-column{
-        padding-left: 0 !important; 
     }
 
 }
