@@ -2,7 +2,10 @@ var swiperMob = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 32,
   breakpoints: {
-    1122: {
+    1120: {
+      slidesPerView: 2
+    },
+    1600: {
       slidesPerView: 3
     }
   },
