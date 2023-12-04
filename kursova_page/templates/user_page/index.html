@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+
+
+{% extends '../base.html' %}
+{% block head %} 
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Account</title>
+    <link rel="stylesheet" href="{% static 'user_page/styles/style.css' %}">
 </head>
-<body>
-    <h1>Hello, {{username}}</h1>
-</body>
-</html>
+{% endblock head%}
+
+
+{% block content %}
+    <h1 style="height: 1000px; line-height: 1000px; font-size: 100px;">Hello, {{username}}</h1>
+{% endblock content%}
+    

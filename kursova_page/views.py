@@ -5,11 +5,22 @@ from django.contrib import messages
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.cache import cache_control
+from .forms import AccountCreationForm
 
 # Create your views here.
 def index(request):
     data = Offers.objects.all()
-    return render(request, 'index.html', {'data': data})
+    if request.method == "POST":
+        form = AccountCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/")
+        else:
+            messages.error(request, form.errors, extra_tags="register")
+    else:
+        form = AccountCreationForm()
+
+    return render(request, 'index.html', {'data': data, 'form': form})
 
 @login_required(login_url="/login")
 @cache_control(no_cache=True, must_revalidate = True, no_store = True)
@@ -30,6 +41,19 @@ def LoginUser(request):
         else:
             messages.error(request, "Enter your data correctly.")
             return HttpResponseRedirect("/")
+
+# def RegisterUser(request):
+#     if request.method == "POST":
+        
+#         username = request.POST.get('username') 
+#         password = request.POST.get('password') 
+#         user = authenticate(username = username, password = password)
+#         if user != None:
+#             login(request, user)
+#             return HttpResponseRedirect("login/")
+#         else:
+#             messages.error(request, "Enter your data correctly.")
+#             return HttpResponseRedirect("/")
 
 def LogOut(request):
     logout(request)
