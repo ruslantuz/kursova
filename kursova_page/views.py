@@ -40,20 +40,8 @@ def LoginUser(request):
             return HttpResponseRedirect("login/")
         else:
             messages.error(request, "Enter your data correctly.")
+            # ADD EXTRA TAGS
             return HttpResponseRedirect("/")
-
-# def RegisterUser(request):
-#     if request.method == "POST":
-        
-#         username = request.POST.get('username') 
-#         password = request.POST.get('password') 
-#         user = authenticate(username = username, password = password)
-#         if user != None:
-#             login(request, user)
-#             return HttpResponseRedirect("login/")
-#         else:
-#             messages.error(request, "Enter your data correctly.")
-#             return HttpResponseRedirect("/")
 
 def LogOut(request):
     logout(request)

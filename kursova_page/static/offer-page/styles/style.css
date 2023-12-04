@@ -10,7 +10,10 @@ header{
 .offer-title{
     margin: 20px 0;
 }
-
+.head-wrapper{
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;;
+}
 .offer-info-head{
     margin-bottom: 20px;
 }

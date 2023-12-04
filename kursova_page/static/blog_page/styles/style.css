@@ -7,11 +7,14 @@ header{
     background-color: var(--secondary-color);
     position: relative;
 }
-
+.head-wrapper{
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;;
+}
 .blog-title{
     padding: 0;
     justify-content: end;
-    padding: 30px 0;
+    padding-bottom: 40px;
 }
 .fb-comments, .fb-comments span{
     width: 100% !important;
