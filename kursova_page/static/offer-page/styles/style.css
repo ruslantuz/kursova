@@ -7,33 +7,11 @@ header{
     background-color: var(--secondary-color);
     position: relative;
 }
-
-.blog-title{
-    padding: 0;
-    justify-content: end;
-    padding: 40px 0;
-}
-.fb-comments, .fb-comments span{
-    width: 100% !important;
-}
-.blog-post-wrap{
-    margin-top: 0;
-}
-.blog-image-block{
-    background: url("../../images/blog_img.jpg");
-    background-size: cover;
-    background-position: center;
-
-    padding: 0 !important;
-}
-.hero-title{
-    max-width: 100%;
+.offer-title{
+    margin: 20px 0;
 }
 
-.section-wrap {
-    padding-top: 120px !important;
-}
-.blog-post-wrap, .offer-info-head{
+.offer-info-head{
     margin-bottom: 20px;
 }
 @media only screen and (max-width: 380px) {
@@ -60,12 +38,12 @@ header{
         gap: 10px;
         padding: 20px 0;
     }
+    .section-wrap {
+        padding-top: 120px !important;
+    }
 
 }
 @media only screen and (min-width: 1120px) {
-    .blog-image-block{
-        margin-bottom: 40px;
-    }
     .offer-info-content, .offer-info-head{
         grid-auto-flow: column;
     }
