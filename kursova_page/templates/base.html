@@ -73,10 +73,6 @@
 					{{field}}
 				{% endfor %}
 
-				{% for message in messages %}
-					{{message.tags}}
-					{{message}}
-				{% endfor %}
 				
 				<!-- <input type="text" class="" name="username" placeholder="Username" required="" autofocus="" />
 				<input type="password" class="" name="password" placeholder="Password" required=""/>       -->
@@ -214,11 +210,11 @@
 			<script>
 				Swal.fire({
 					title: 'Register error!',
-					html: '{{message}}',
+					html: 'Error field: {{message}}',
 					confirmButtonText: 'Close',
 				})
 			</script>
-		{% elif 'error' in message.tags %}
+		{% elif 'error' in message.tags and 'login' in message.tags %}
 			<script>
 				Swal.fire({
 					title: 'Login error!',

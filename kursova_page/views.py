@@ -39,8 +39,7 @@ def LoginUser(request):
             login(request, user)
             return HttpResponseRedirect("login/")
         else:
-            messages.error(request, "Enter your data correctly.")
-            # ADD EXTRA TAGS
+            messages.error(request, "Enter your data correctly.", extra_tags="login")
             return HttpResponseRedirect("/")
 
 def LogOut(request):
