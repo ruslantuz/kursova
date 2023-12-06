@@ -1,6 +1,6 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from kursova_page.models import Offers
+from kursova_page.models import Destinations, Offers
 from django.contrib import messages
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
@@ -10,6 +10,7 @@ from .forms import AccountCreationForm
 # Create your views here.
 def index(request):
     data = Offers.objects.all()
+    dest = Destinations.objects.all()
     if request.method == "POST":
         form = AccountCreationForm(request.POST)
         if form.is_valid():
@@ -20,15 +21,15 @@ def index(request):
     else:
         form = AccountCreationForm()
 
-    return render(request, 'index.html', {'data': data, 'form': form})
+    return render(request, 'index.html', {'data': data, 'dest':dest ,'form': form})
 
 @login_required(login_url="/login")
 @cache_control(no_cache=True, must_revalidate = True, no_store = True)
 
 def Login(request):
     if request.user.is_authenticated:
-        username = request.user.username
-        return render(request, 'user_page/index.html', {'username':username})
+        user = request.user
+        return render(request, 'user_page/index.html', {'user':user})
 
 def LoginUser(request):
     if request.method == "POST":

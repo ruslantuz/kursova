@@ -12,6 +12,18 @@
         flex-wrap: wrap;
 
     }
+    .login-wrap{
+        margin-left: auto  !important; 
+        padding-top: 20px;
+        flex-direction: row;
+        text-align: end;
+    }
+    .btn-login-signup{
+        flex-direction: row;
+    }
+    .signup-btn{
+        padding: 20px 10px 20px 10px !important;
+    }
     .header-menu{
         opacity: 1;
         text-align: center;
@@ -358,9 +370,9 @@
     .section-wrap > *{
         padding: 0px 32px !important;
     }
-    .header-menu, .login-wrap{
+    /* .header-menu, .login-wrap{
         display: block;
-    }
+    } */
     header .menu, .btn-login-signup{
         flex-direction: row;
     }

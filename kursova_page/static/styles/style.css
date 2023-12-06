@@ -25,7 +25,7 @@ body{
     color:black
 }
 .grey-text{
-    color:var(--secondary-text-color); 
+    color:var(--secondary-text-color) !important; 
 }
 .d-block{
     display:block;
@@ -139,6 +139,9 @@ input{
 .hide, .header-menu:not(.hide), .head-wrapper{
 	transition: height 200ms ease-in-out 100ms,
 	all 200ms ease-in-out 0ms;
+}
+.login-wrap{
+	transition: all 50ms ease-out 0ms;
 }
 .backgr-position{
 	background-position: 50%;

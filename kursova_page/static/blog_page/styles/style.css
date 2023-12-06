@@ -2,6 +2,7 @@
 @import url("../../styles/reset.css");
 @import url("../../styles/header.css");
 @import url("../../styles/variables.css");
+@import url("../../styles/news_form.css");
 @import url("../../styles/adaptive.css");
 header{
     background-color: var(--secondary-color);
@@ -46,6 +47,9 @@ header{
 
     .blog-post-wrap{
         margin-top: 20px !important;
+    }
+    .blog{
+        margin-bottom: 40px !important;
     }
 }
 @media only screen and (max-width: 720px) {

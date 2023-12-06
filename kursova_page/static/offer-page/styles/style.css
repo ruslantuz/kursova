@@ -2,9 +2,11 @@
 @import url("../../styles/reset.css");
 @import url("../../styles/header.css");
 @import url("../../styles/variables.css");
+@import url("../../styles/news_form.css");
 @import url("../../styles/adaptive.css");
+
 header{
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color) !important;
     position: relative;
 }
 .offer-title{
@@ -28,11 +30,12 @@ header{
         flex-direction: column;
     }
 }
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 1122px) {
     .offer-info-content .offer-image-block{
         width: 50%;
         height: fit-content;
     }
+
 }
 
 @media only screen and (min-width: 720px) {
@@ -52,6 +55,9 @@ header{
     }
     .offer-price-wrap{
         justify-content: end;
+    }
+    .offer-info{
+        margin-bottom: 40px !important;
     }
 }
 .offer-image-block {

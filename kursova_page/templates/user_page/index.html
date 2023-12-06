@@ -13,6 +13,28 @@
 
 
 {% block content %}
-    <h1 style="height: 1000px; line-height: 1000px; font-size: 100px;">Hello, {{username}}</h1>
-{% endblock content%}
+
+    <section>
+        <div class="section-wrap">
+            <h1 class="title-big black-text"><i class="fa-solid fa-user"></i> My Travellian Account</h1>
+            <div class="info-wrap">
+                <div class="user-info-panel">
+                    <h2 class="title-small user-caption"> Hello, {{user.username}}</h2>
+                    <span class="title-small">Account created on {{user.date_joined}}</span>
+                    <hr>
+                    <span class="title-small">You logged in on {{user.last_login}}</span>
+                </div>
+                <div class="user-info-panel info-panel-right">
+                    <div class="order-list">
+                        <span class="title-big grey-text order-empty d-block">Your orders will be here</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    {% endblock content%}
     

@@ -7,6 +7,9 @@ var swiperMob = new Swiper(".mySwiper", {
     },
     1600: {
       slidesPerView: 3
+    },
+    2300: {
+      slidesPerView: 4
     }
   },
   grabCursor: true,
