@@ -11,6 +11,10 @@ from .forms import AccountCreationForm
 def index(request):
     data = Offers.objects.all()
     dest = Destinations.objects.all()
+    form = registerForm(request)
+    return render(request, 'index.html', {'data': data, 'dest':dest ,'form': form})
+
+def registerForm(request):
     if request.method == "POST":
         form = AccountCreationForm(request.POST)
         if form.is_valid():
@@ -20,10 +24,9 @@ def index(request):
             messages.error(request, form.errors, extra_tags="register")
     else:
         form = AccountCreationForm()
+    return form
 
-    return render(request, 'index.html', {'data': data, 'dest':dest ,'form': form})
-
-@login_required(login_url="/login")
+@login_required(login_url="/")
 @cache_control(no_cache=True, must_revalidate = True, no_store = True)
 
 def Login(request):
@@ -49,16 +52,10 @@ def LogOut(request):
     return HttpResponseRedirect("/")
 
 def blogs(request):
-    return render(request, 'blog_page/index.html')
-
-def offers(request):
-    return render(request, 'offer-page/index.html')
-
-def blog_item(request, id):
-    data = Offers.objects.all()
-    return render(request, 'blog_page/index.html', {'data': data})
+    form = registerForm(request)
+    return render(request, 'blog_page/index.html', {'form': form})
 
 def offer_item(request, id):
     data = Offers.objects.get(id = id)
-    return render(request, 'offer-page/index.html', {'data': data})
-# Note: insert id of item in database inside a item link on main page, then use this method to render page based by id 
+    form = registerForm(request)
+    return render(request, 'offer-page/index.html', {'data': data, 'form': form})

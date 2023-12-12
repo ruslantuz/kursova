@@ -151,7 +151,7 @@ input{
 
 .login-form{
 	padding: 20px ;
-	flex-direction: column;
+	flex-direction: column !important;
 }
 .login-form 
 > *:not(h2) {
