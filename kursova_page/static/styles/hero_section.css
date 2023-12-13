@@ -49,6 +49,11 @@
     font-family: var(--page-font1);
     font-size: 14px;
 }
+input[type="date"]{
+    appearance: textfield;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+}
 input[type="date"]::-webkit-calendar-picker-indicator{
     color: rgba(0, 0, 0, 0);
     opacity: 1;
