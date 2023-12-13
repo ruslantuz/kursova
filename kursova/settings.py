@@ -24,9 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-81_lfvtlaxpu4olv#0+%suwna6&f2!vog2ob4q%+ow@s1tm328'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['kursova-production-0300.up.railway.app']
+handler404 = 'kursova_page.views.custom_404'
+
+ALLOWED_HOSTS = ['kursova-production-0300.up.railway.app', '127.0.0.1']
 CSRF_TRUSTED_ORIGINS = ['https://kursova-production-0300.up.railway.app']
 
 # Application definition
@@ -124,6 +126,7 @@ STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 
 # Default primary key field type
