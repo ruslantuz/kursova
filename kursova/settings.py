@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-81_lfvtlaxpu4olv#0+%suwna6&f2!vog2ob4q%+ow@s1tm328
 DEBUG = True
 
 ALLOWED_HOSTS = ['kursova-production-0300.up.railway.app']
-
+CSRF_TRUSTED_ORIGINS = ['https://kursova-production-0300.up.railway.app']
 
 # Application definition
 
