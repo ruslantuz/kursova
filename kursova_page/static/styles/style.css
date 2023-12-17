@@ -182,7 +182,7 @@ input{
 .swiper{
 	z-index: 0 !important;
 }
-.offer-description, .offer-rate , .offer-text-block {
+.offer-description , .offer-text-block {
 	flex: 1;
 }
 .offer-text-block{

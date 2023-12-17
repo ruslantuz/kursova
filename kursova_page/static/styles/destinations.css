@@ -23,18 +23,7 @@
     border-radius: 16px;
     background: linear-gradient(0deg, rgba(255, 119, 87, 0.10) 0%, rgba(255, 119, 87, 0.10) 100%), lightgray 50% / cover no-repeat;
 }
-.destination1{
-    background: url("../images/destinations_pics/destination1.jpg");
-}
-.destination2{
-    background: url("../images/destinations_pics/destination2.jpg");
-}
-.destination3{
-    background: url("../images/destinations_pics/destination3.jpg");
-}
-.destination4{
-    background: url("../images/destinations_pics/destination4.jpg");
-}
+
 
 .content-item{
     background-position: 50% 0%;
