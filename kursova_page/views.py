@@ -7,7 +7,6 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.cache import cache_control
 from .forms import AccountCreationForm
 
-# Create your views here.
 def index(request):
     data = Offers.objects.all()
     dest = Destinations.objects.all()
