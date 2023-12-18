@@ -199,9 +199,6 @@
     .menu-btn{
         display: none;
     }
-    /* .header-menu, .login-wrap{
-        display: block;
-    } */
     header .menu, .btn-login-signup, .blog-post-wrap, .planners-wrap, .gallery-images-wrap, .offer-price-details, .offer-wrap{
         flex-direction: row;
     }
@@ -261,7 +258,6 @@
         gap: 32px;
     }
     .offer-item{
-        /* display: block; */
         background-size: cover;
     }
     .offer-price-details{
@@ -370,9 +366,6 @@
     .section-wrap > *{
         padding: 0px 32px !important;
     }
-    /* .header-menu, .login-wrap{
-        display: block;
-    } */
     header .menu, .btn-login-signup{
         flex-direction: row;
     }

@@ -79,9 +79,6 @@
     font-size: 18px;
     text-decoration:none;
 }
-/* .login-wrap{
-    display: none;
-} */
 
 .menu, .btn-login-signup{
     display: flex;

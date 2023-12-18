@@ -28,7 +28,7 @@ DEBUG = True
 
 handler404 = 'kursova_page.views.custom_404'
 
-ALLOWED_HOSTS = ['kursova-production-0300.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['kursova-production-0300.up.railway.app', '127.0.0.1', 'xen451.pythonanywhere.com']
 CSRF_TRUSTED_ORIGINS = ['https://kursova-production-0300.up.railway.app']
 
 # Application definition
@@ -120,7 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
