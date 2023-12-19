@@ -62,7 +62,6 @@
 					{% if user.is_authenticated %}
 					<a href="{% url 'logout' %}" class="header-emailform-font" id="loginBtn">Logout</a>
 					<a href="{% url 'login' %}" class="signup-btn d-flex header-emailform-font">My Account</a>
-
 					{% else %}
 					<span class="header-emailform-font" id="loginBtn">Login</span>
 					<span class="signup-btn d-flex header-emailform-font" id="signupBtn" >Sign up</span>
@@ -72,7 +71,6 @@
 		</div>
 	</header>
 
-	<!-- login modal -->
 	<div class="modal-cont" id="loginModal">
 		<div id="login-modal" class="modal-box">
 			<form action="/login_user" class="login-form form-column d-flex" method="POST">       
@@ -91,21 +89,14 @@
 			<form class="login-form form-column d-flex" method="POST">       
 				{% csrf_token %} 
 				<h2 class="title-small black-text">Please Sign Up</h2>
-
 				{% for field in form %}
 					{{field}}
-				{% endfor %}
-
-				
+				{% endfor %}				
 				<button class="modal-btn white-text" type="submit">Sign Up</button>   
 			</form>
 			<i class="fa-solid fa-circle-xmark close-btn"></i>
 		</div>
 	</div>	  
-
-
-	<!--modal end -->
-
 		{% block content %} {% endblock content %}
 		<div class="relative-wrap">
 			<section class="news-form">
@@ -264,4 +255,3 @@
 	{% block scripts %} {% endblock scripts %}
   </body>
 </html>
-  
