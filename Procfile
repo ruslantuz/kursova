@@ -1,1 +1,1 @@
-web: gunicorn kursova.wsgi
+web: gunicorn --threads=2 kursova.wsgi
