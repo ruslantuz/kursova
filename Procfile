@@ -1,1 +1,1 @@
-web: gunicorn kursova.wsgi --workers=3 --timeout 200 --log-file -
+web: gunicorn kursova.wsgi --timeout 15 --keep-alive 5 --log-level debug
