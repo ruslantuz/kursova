@@ -1,1 +1,1 @@
-web: gunicorn kursova.wsgi --timeout 15 --keep-alive 5
+web: gunicorn kursova.wsgi
